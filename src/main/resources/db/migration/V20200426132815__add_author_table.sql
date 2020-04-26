@@ -5,5 +5,5 @@ create table author
 	name varchar(16) not null
 );
 
-insert into author (name, age) values ('bezkoder', 27);
-insert into author (name, age) values ('zKoder', 30);
+insert into author (name, age) values ('张三', 25);
+insert into author (name, age) values ('李四', 43);

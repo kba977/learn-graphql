@@ -6,5 +6,5 @@ create table tutorial
 	author_id long not null
 );
 
-insert into tutorial (title, description, author_id) values ('Tutorial #1', 'updated Desc Tut#1', 1);
-insert into tutorial (title, description, author_id) values ('Tutorial #2', 'Description for Tut#2', 2);
+insert into tutorial (title, description, author_id) values ('学习 Java', '该教程可以帮助你学习 Java', 1);
+insert into tutorial (title, description, author_id) values ('学习 GraphQL', '很棒的 GraphQL 教程', 2);
