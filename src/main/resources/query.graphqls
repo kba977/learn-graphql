@@ -1,0 +1,10 @@
+# Root
+type Query {
+    # Author
+    findAllAuthors: [Author]!
+    countAuthors: Int!
+
+    # Tutorial
+    findAllTutorials: [Tutorial]!
+    countTutorials: Int!
+}

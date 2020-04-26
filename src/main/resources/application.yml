@@ -1,0 +1,20 @@
+server:
+  port: 8083
+
+spring:
+  flyway:
+    locations: classpath:db/migration
+    out-of-order: true
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+  datasource:
+    url: jdbc:mysql://localhost:3306/learn_graphql
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis-plus:
+  type-aliases-package: com.kba977.learngraphql.mapper
+#  mapper-locations: classpath:mybatis/mapper/**/*Mapper.xml
+#  config-location: classpath:mybatis/mybaits-config.xml

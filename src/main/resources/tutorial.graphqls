@@ -1,0 +1,6 @@
+type Tutorial {
+    id: ID!
+    title: String!
+    description: String
+    author: Author
+}
