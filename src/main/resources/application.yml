@@ -16,5 +16,3 @@ spring:
 
 mybatis-plus:
   type-aliases-package: com.kba977.learngraphql.mapper
-#  mapper-locations: classpath:mybatis/mapper/**/*Mapper.xml
-#  config-location: classpath:mybatis/mybaits-config.xml

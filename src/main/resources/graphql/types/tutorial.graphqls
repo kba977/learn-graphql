@@ -1,0 +1,17 @@
+type Tutorial {
+    id: ID!
+    title: String!
+    description: String
+    author: Author
+}
+
+input CreateTutorialInput {
+    title: String!
+    description: String!
+    authorId: ID!
+}
+
+input UpdateTutorialInput {
+    title: String
+    description: String
+}

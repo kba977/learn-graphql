@@ -1,4 +1,4 @@
-package com.kba977.learngraphql.resolver;
+package com.kba977.learngraphql.graphql.resolver;
 
 import com.kba977.learngraphql.model.Author;
 import com.kba977.learngraphql.model.Tutorial;

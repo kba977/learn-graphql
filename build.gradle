@@ -1,8 +1,9 @@
 plugins {
   id 'org.springframework.boot' version '2.2.6.RELEASE'
   id 'io.spring.dependency-management' version '1.0.9.RELEASE'
-  id 'java'
   id "org.flywaydb.flyway" version "6.3.3"
+  id 'java'
+  id 'groovy'
 }
 
 group = 'com.kba977'
@@ -24,22 +25,36 @@ repositories {
 }
 
 dependencies {
-  compile group: 'com.baomidou', name: 'mybatis-plus-boot-starter', version: '3.1.2'
-  implementation 'com.graphql-java-kickstart:graphql-spring-boot-starter:7.0.1'
-  implementation 'com.graphql-java-kickstart:graphiql-spring-boot-starter:7.0.1'
-  implementation 'com.graphql-java:graphql-java-extended-scalars:1.0.1'
-  implementation 'com.google.guava:guava:26.0-jre'
-  compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+  // SpringBoot
   implementation 'org.springframework.boot:spring-boot-starter-web'
-  compileOnly 'org.projectlombok:lombok'
-  compile group: 'org.flywaydb', name: 'flyway-core', version: '6.3.3'
   developmentOnly 'org.springframework.boot:spring-boot-devtools'
-  annotationProcessor 'org.projectlombok:lombok'
   testImplementation('org.springframework.boot:spring-boot-starter-test') {
     exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
   }
+
+  // Graphql
+  implementation 'com.graphql-java-kickstart:graphql-spring-boot-starter:7.0.1'
+  implementation 'com.graphql-java-kickstart:graphiql-spring-boot-starter:7.0.1'
+
+  // Mybatis-Plus
+  implementation 'com.baomidou:mybatis-plus-boot-starter:3.1.2'
+
+  // Mysql
+  implementation 'mysql:mysql-connector-java:5.1.6'
+
+  // Flyway
+  implementation 'org.flywaydb:flyway-core:6.3.3'
+
+  // Lombok
+  compileOnly 'org.projectlombok:lombok'
+  annotationProcessor 'org.projectlombok:lombok'
+
+  // Spock
+  testImplementation 'org.spockframework:spock-core:2.0-M1-groovy-2.5'
+  testImplementation 'org.spockframework:spock-spring:2.0-M1-groovy-2.5'
 }
 
+// Flyway插件配置
 flyway {
   url = 'jdbc:mysql://localhost:3306/learn_graphql'
   user = 'root'

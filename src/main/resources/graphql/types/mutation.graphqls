@@ -1,0 +1,10 @@
+# Root
+type Mutation {
+    # Author
+    createAuthor(createAuthorInput: CreateAuthorInput!): Author!
+
+    # Tutorial
+    createTutorial(createTutorialInput: CreateTutorialInput!): Tutorial!
+    updateTutorial(id: ID!, updateTutorialInput: UpdateTutorialInput): Tutorial!
+    deleteTutorial(id: ID!): Boolean
+}

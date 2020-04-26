@@ -2,9 +2,11 @@
 type Query {
     # Author
     findAllAuthors: [Author]!
+    findAuthorById(id: ID!): Author
     countAuthors: Int!
 
     # Tutorial
     findAllTutorials: [Tutorial]!
+    findTutorialById(id: ID!): Tutorial
     countTutorials: Int!
 }

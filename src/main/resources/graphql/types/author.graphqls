@@ -4,7 +4,8 @@ type Author {
     age: Int
 }
 
-
-
-
+input CreateAuthorInput {
+    name: String!
+    age: Int!
+}
 
